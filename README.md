@@ -9,7 +9,7 @@ Check out the live version of my portfolio here: [ujwal-srimanth.github.io/Portf
 The portfolio is built using the following technologies:
 
 - **Frontend**: React.js
-- **Styling**: CSS, TailwindCSS (or other framework if applicable)
+- **Styling**: CSS
 - **Hosting**: GitHub Pages
 
 ## ✨ Features
@@ -48,7 +48,7 @@ Follow these steps to run the project locally:
 
 ## 📁 Project Structure
 ```
-Portfolio/
+ujwal/
 ├── public/          # Static assets
 ├── src/             # Source code
 │   ├── components/  # Reusable components
@@ -68,10 +68,7 @@ Portfolio/
 - **Social Media App** *(In Progress)*
   - Technologies: React, Redux, MongoDB, Node.js
 
-For more details, check out the [Projects](https://ujwal-srimanth.github.io/Portfolio#projects) section on my portfolio.
-
-## 📝 License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+For more details, check out the [Projects](https://ujwal-srimanth.github.io/Portfolio#projects) section on my portfolio..
 
 ## 🙌 Acknowledgments
 - Thanks to all my mentors and peers for their support.
@@ -80,7 +77,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## 📬 Contact
 Feel free to reach out to me:
 - **GitHub**: [@Ujwal-Srimanth](https://github.com/Ujwal-Srimanth)
-- **Email**: ujwal.srimanth@example.com (replace with your email)
+- **Email**: nusvarma@gmail.com
 
 ---
 
