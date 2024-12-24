@@ -26,24 +26,19 @@ Follow these steps to run the project locally:
    git clone https://github.com/Ujwal-Srimanth/Portfolio.git
    ```
 
-2. Navigate to the project directory:
-   ```bash
-   cd Portfolio
-   ```
-
-3. Install dependencies:
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-4. Start the development server:
+3. Start the development server:
    ```bash
    npm start
    ```
 
 5. Open your browser and navigate to:
    ```
-   http://localhost:3000
+   http://localhost:3000/portfolio
    ```
 
 ## 📁 Project Structure
@@ -65,10 +60,10 @@ ujwal/
   - Backend Developer at SAP Labs
   - Technologies: AWS CodeGuru, Node.js, React.js
 
-- **Social Media App** *(In Progress)*
+- **Social Media App** 
   - Technologies: React, Redux, MongoDB, Node.js
 
-For more details, check out the [Projects](https://ujwal-srimanth.github.io/Portfolio#projects) section on my portfolio..
+For more details, check out the [Projects](https://ujwal-srimanth.github.io/Portfolio/projects) section on my portfolio..
 
 ## 🙌 Acknowledgments
 - Thanks to all my mentors and peers for their support.
