@@ -63,7 +63,7 @@ ujwal/
 - **Social Media App** 
   - Technologies: React, Redux, MongoDB, Node.js
 
-For more details, check out the [Projects](https://ujwal-srimanth.github.io/Portfolio/projects) section on my portfolio..
+For more details, check out the [Projects](https://ujwal-srimanth.github.io/Portfolio#projects) section on my portfolio..
 
 ## 🙌 Acknowledgments
 - Thanks to all my mentors and peers for their support.
