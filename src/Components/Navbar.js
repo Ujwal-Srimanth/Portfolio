@@ -94,18 +94,29 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                         onClose={handleMenuClose}
                         keepMounted
                     >
-                        {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
+                        {['Home', 'About', 'Education & Experience','Skills', 'Projects', 'Contact'].map((item) => (
                             <MenuItem
-                                key={item}
-                                onClick={handleMenuClose}
-                                component={Link}
-                                to={`/${item.toLowerCase() === 'home' ? '' : item.toLowerCase()}`}
-                                style={{
-                                    ...(location.pathname ===
-                                        `/${item.toLowerCase() === 'home' ? '' : item.toLowerCase()}`
-                                        && styles.activeLink(darkMode)),
-                                }}
-                            >
+                            key={item}
+                            onClick={handleMenuClose}
+                            component={Link}
+                            to={`/${
+                                item === 'Home'
+                                    ? ''
+                                    : item === 'Education & Experience'
+                                    ? 'education-experience'
+                                    : item.toLowerCase()
+                            }`}
+                            style={{
+                                ...(location.pathname ===
+                                    `/${
+                                        item === 'Home'
+                                            ? ''
+                                            : item === 'Education & Experience'
+                                            ? 'educationexperience'
+                                            : item.toLowerCase()
+                                    }` && styles.activeLink(darkMode)),
+                            }}
+                        >
                                 {item}
                             </MenuItem>
                         ))}
@@ -116,17 +127,17 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 </>
             ) : (
                 <div style={styles.navItemsContainer}>
-                    {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
-                        <Link
-                            key={item}
-                            to={`/${item.toLowerCase() === 'home' ? '' : item.toLowerCase()}`}
-                            style={{
-                                ...styles.navLink(darkMode),
-                                ...(location.pathname ===
-                                    `/${item.toLowerCase() === 'home' ? '' : item.toLowerCase()}`
-                                    && styles.activeLink(darkMode)),
-                            }}
-                        >
+                    {['Home', 'About', 'Education & Experience','Skills', 'Projects', 'Contact'].map((item) => (
+                       <Link
+                       key={item}
+                       to={`/${item.toLowerCase() === 'home' ? '' : item.toLowerCase().replace(/ & /g, '-').replace(/\s+/g, '-')}`}
+                       style={{
+                           ...styles.navLink(darkMode),
+                           ...(location.pathname ===
+                               `/${item.toLowerCase() === 'home' ? '' : item.toLowerCase().replace(/ & /g, '-').replace(/\s+/g, '-')}`
+                               && styles.activeLink(darkMode)),
+                       }}
+                   >
                             {item}
                         </Link>
                     ))}

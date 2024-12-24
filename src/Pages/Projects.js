@@ -6,8 +6,7 @@ import EmbPdf from './Emb.pdf'; // assuming it's in the same folder
 import { Box, Typography, Button, Chip, Grid, Paper, Dialog, DialogTitle, DialogContent } from '@mui/material';
 import SAP from './SAP.pdf'
 
-const Projects = () => {
-    const [darkMode, setDarkMode] = useState(false);
+const Projects = ({darkMode,toggleDarkMode}) => {
 
     const theme = createTheme({
         palette: {
@@ -15,7 +14,7 @@ const Projects = () => {
         },
     });
 
-    const toggleDarkMode = () => setDarkMode(!darkMode);
+   
 
     const [open, setOpen] = useState(false);
 
@@ -42,8 +41,8 @@ const Projects = () => {
             color: darkMode ? '#ffffff' : '#000000',
             padding: '20px',
             boxSizing: 'border-box',
-            overflowY: 'scroll',  // Make the entire page scrollable
-            paddingTop: '80px',  // Add top padding to prevent overlap with navbar
+            overflowY: 'scroll',  
+            paddingTop: '80px',  
         }),
         innerContainer: {
             display: 'flex',
@@ -367,7 +366,7 @@ const Projects = () => {
         </div>
 
         <div style={styles.projectStatus}>
-            <Chip label="Pending" color="secondary" icon={<Assignment />} />
+        <Chip label="Completed" color="primary" icon={<Assignment />} />
         </div>
 
         <div style={styles.buttonContainer}>

@@ -2,16 +2,13 @@ import React, { useState } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Navbar from '../Components/Navbar.js';
 
-const Contact = () => {
-    const [darkMode, setDarkMode] = useState(false);
-
+const Contact = ({darkMode,toggleDarkMode}) => {
+    
     const theme = createTheme({
         palette: {
             mode: darkMode ? 'dark' : 'light',
         },
     });
-
-    const toggleDarkMode = () => setDarkMode(!darkMode);
 
     const styles = {
         container: (darkMode) => ({

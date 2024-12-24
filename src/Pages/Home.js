@@ -14,8 +14,8 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Button from '@mui/material/Button';
 import resumePdf from './resume.pdf';
 
-const Home = () => {
-    const [darkMode, setDarkMode] = useState(false);
+const Home = ({darkMode,toggleDarkMode}) => {
+    
     const [openDialog, setOpenDialog] = useState(false);
 
     const theme = createTheme({
@@ -24,13 +24,14 @@ const Home = () => {
         },
     });
 
-    const toggleDarkMode = () => setDarkMode(!darkMode);
+ 
 
     const styles = {
         container: (darkMode) => ({
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            justifyContent : 'center',
             minHeight: '100vh',
             backgroundColor: darkMode ? '#121212' : '#f5f5f5',
             color: darkMode ? '#ffffff' : '#000000',

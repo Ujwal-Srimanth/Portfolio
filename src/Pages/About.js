@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Navbar from '../Components/Navbar.js';
 
-const About = () => {
-    const [darkMode, setDarkMode] = useState(false);
+const About = ({darkMode,toggleDarkMode}) => {
+   
 
     const theme = createTheme({
         palette: {
@@ -11,7 +11,7 @@ const About = () => {
         },
     });
 
-    const toggleDarkMode = () => setDarkMode(!darkMode);
+   
 
     const styles = {
         container: (darkMode) => ({
@@ -64,7 +64,7 @@ const About = () => {
                         <strong style={styles.boldText}>MongoDB</strong>, <strong style={styles.boldText}>PostgreSQL</strong>, I strive to deliver 
                         user-friendly and efficient solutions. <br /><br />
                         I always aim to learn new technologies and improve my skill set. Currently, I am learning 
-                        <strong style={styles.boldText}>React Native</strong> to expand my expertise in mobile app development.
+                        <strong style={styles.boldText}> React Native</strong> to expand my expertise in mobile app development.
                     </p>
                 </div>
             </div>
