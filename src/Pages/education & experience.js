@@ -90,15 +90,6 @@ const EducationExperience = ({darkMode,toggleDarkMode}) => {
                         - Worked as a SDE Intern <br />
                         - Developed various features for an application.<br />
                         - Worked on React, NodeJS, ExpressJS, and PostgreSQL <br />
-                        <Tooltip title="View Internship Completion Letter" arrow>
-                            <IconButton
-                                style={styles.iconButton}
-                                color="primary"
-                                onClick={handleDialogOpen}
-                            >
-                                <PictureAsPdf />
-                            </IconButton>
-                        </Tooltip>
                     </div>
                     <Divider style={styles.divider} />
                     <div style={styles.item}>

@@ -74,7 +74,7 @@ const Contact = ({darkMode,toggleDarkMode}) => {
                     </p>
                     <div style={styles.contactInfo}>
                         <a href="mailto:ujwal@example.com" style={styles.contactItem}>
-                            Email: <span style={styles.link}>nusvarma@example.com</span>
+                            Email: <span style={styles.link}>nusvarma@gmail.com</span>
                         </a>
                         <a href="https://www.linkedin.com/in/nadimpalli-ujwal-srimanth-varma-462443267/" style={styles.contactItem}>
                             LinkedIn: <span style={styles.link}>linkedin.com/in/ujwal</span>
