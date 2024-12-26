@@ -39,7 +39,7 @@ const EducationExperience = ({darkMode,toggleDarkMode}) => {
         }),
         card: {
             width: '100%',
-            maxWidth: '800px',
+            maxWidth: '650px',
             marginBottom: '20px',
             padding: '20px',
             borderRadius: '12px',
@@ -93,7 +93,7 @@ const EducationExperience = ({darkMode,toggleDarkMode}) => {
                     </div>
                     <Divider style={styles.divider} />
                     <div style={styles.item}>
-                        <strong style={styles.boldText}>Software Development Intern</strong> <br />
+                        <h2 style={styles.boldText}>Software Development Intern</h2> 
                         <strong>Providence Global India</strong> - January 2025 (Upcoming) <br />
                         - Will work as an SDE Intern
                     </div>

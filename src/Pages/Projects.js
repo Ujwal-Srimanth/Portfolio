@@ -39,10 +39,10 @@ const Projects = ({darkMode,toggleDarkMode}) => {
             minHeight: '100vh',
             backgroundColor: darkMode ? '#121212' : '#f5f5f5',
             color: darkMode ? '#ffffff' : '#000000',
-            padding: '20px',
+            padding: '40px',
             boxSizing: 'border-box',
             overflowY: 'scroll',  
-            paddingTop: '80px',  
+            paddingTop: '100px',  
         }),
         innerContainer: {
             display: 'flex',
