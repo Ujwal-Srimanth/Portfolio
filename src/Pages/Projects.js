@@ -5,8 +5,16 @@ import Navbar from '../Components/Navbar.js';
 import EmbPdf from './Emb.pdf'; // assuming it's in the same folder
 import { Box, Typography, Button, Chip, Grid, Paper, Dialog, DialogTitle, DialogContent } from '@mui/material';
 import SAP from './SAP.pdf'
+import CodeReviewerPopup from "./CodeReviewerPopup";
+import SocialMediaPopup from "./SocialMediaPopup";
+
 
 const Projects = ({darkMode,toggleDarkMode}) => {
+
+    const [activePopup, setActivePopup] = useState(null);
+
+  const openPopup = (popupName) => setActivePopup(popupName);
+  const closePopup = () => setActivePopup(null);
 
     const theme = createTheme({
         palette: {
@@ -41,7 +49,7 @@ const Projects = ({darkMode,toggleDarkMode}) => {
             color: darkMode ? '#ffffff' : '#000000',
             padding: '40px',
             boxSizing: 'border-box',
-            overflowY: 'scroll',  
+            // overflowY: 'scroll',  
             paddingTop: '100px',  
         }),
         innerContainer: {
@@ -143,6 +151,12 @@ const Projects = ({darkMode,toggleDarkMode}) => {
             width: '100%',
             height: '500px',
           },
+          viewMore: (darkMode) => ({
+            color: darkMode ? 'yellow' : 'orange',
+            textDecoration: 'underline',
+            cursor: 'pointer',
+            fontWeight: 'bold',
+        }),
     };
 
     return (
@@ -157,75 +171,91 @@ const Projects = ({darkMode,toggleDarkMode}) => {
                     <Grid container spacing={4} justifyContent="center">
                         {/* Project 1: Efficient Code Review Automation */}
                         <Grid item xs={12} sm={6} md={4}>
-                            <Paper style={styles.projectBox}>
-                                <Typography variant="h6" style={{ fontWeight: 'bold' }}>
-                                    Efficient Code Review Automation
-                                </Typography>
-                                <Typography variant="body2" style={styles.description}>
-                                    Role: Backend Developer
-                                </Typography>
-                                <Typography variant="body2" style={styles.description}>
-                                    Description: Developed a web-based application to automate the code review process. Created middleware to handle tasks such as accepting code uploads, automating pull requests to AWS CodeGuru, processing review recommendations, and displaying them to the user.
-                                </Typography>
+    <Paper style={styles.projectBox}>
+        <Typography variant="h6" style={{ fontWeight: 'bold' }}>
+            Efficient Code Review Automation
+        </Typography>
+        <Typography variant="body2" style={styles.description}>
+            Role: Backend Developer
+        </Typography>
+        <Typography variant="body2" style={styles.description}>
+            Description: Developed a web-based application to automate the code review process. Created middleware to handle tasks such as accepting code uploads, automating pull requests to AWS CodeGuru, processing review recommendations, and displaying them to the user.
+        </Typography>
 
-                                <div style={styles.skillContainer}>
-                                    <div style={styles.skillItem}>
-                                        <img
-                                            src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
-                                            alt="React"
-                                            style={styles.skillImage}
-                                        />
-                                        <Typography variant="body2">React</Typography>
-                                    </div>
-                                    <div style={styles.skillItem}>
-                                        <img
-                                            src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
-                                            alt="Node.js"
-                                            style={styles.skillImage}
-                                        />
-                                        <Typography variant="body2">Node.js</Typography>
-                                    </div>
-                                    <div style={styles.skillItem}>
-                                        <img
-                                            src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
-                                            alt="AWS"
-                                            style={styles.skillImage}
-                                        />
-                                        <Typography variant="body2">AWS</Typography>
-                                    </div>
-                                </div>
+        <div style={styles.skillContainer}>
+            <div style={styles.skillItem}>
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+                    alt="React"
+                    style={styles.skillImage}
+                />
+                <Typography variant="body2">React</Typography>
+            </div>
+            <div style={styles.skillItem}>
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
+                    alt="Node.js"
+                    style={styles.skillImage}
+                />
+                <Typography variant="body2">Node.js</Typography>
+            </div>
+            <div style={styles.skillItem}>
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+                    alt="AWS"
+                    style={styles.skillImage}
+                />
+                <Typography variant="body2">AWS</Typography>
+            </div>
+        </div>
 
-                                <div style={styles.projectStatus}>
-                                    <Chip label="Completed" color="primary" icon={<Assignment />} />
-                                </div>
+        <div style={styles.projectStatus}>
+            <Chip label="Completed" color="primary" icon={<Assignment />} />
+        </div>
 
-                                <div style={styles.buttonContainer}>
-                                    <Button
-                                        variant="contained"
-                                        color="primary"
-                                        href="https://github.com/Ujwal-Srimanth/Efficient-Code-Review-Automation"
-                                        target="_blank"
-                                        style={styles.githubButton}
-                                    >
-                                        View on GitHub
-                                    </Button>
-                                    <Button
-                                        variant="contained"
-                                        color="secondary"
-                                        onClick={handleCertificateOpen}
-                                        style={styles.certificateButton}
-                                    >
-                                        View Certificate
-                                        </Button>
-                                </div>
-                                <Dialog open={isCertificateOpen} onClose={handleCertificateClose} maxWidth="md" fullWidth>
-        <DialogTitle>Certificate</DialogTitle>
-        <DialogContent>
-          <iframe src={SAP} title="SAP Certificate" style={styles.pdfEmbed}></iframe>
-        </DialogContent>
-      </Dialog>
-                            </Paper>
-                        </Grid>
+        {/* New Certificate Link */}
+        <Typography
+            variant="body2"
+            style={{ ...styles.description, textAlign: 'center', marginBottom: '5px' }}
+        >
+            <a
+                href="#"
+                onClick={handleCertificateOpen}
+                style={{ textDecoration: 'underline', color: darkMode ? '#ffffff' : '#000000' }}
+            >
+                View certificate here
+            </a>
+        </Typography>
+
+        <div style={styles.buttonContainer}>
+            <Button
+                variant="contained"
+                color="primary"
+                href="https://github.com/Ujwal-Srimanth/Efficient-Code-Review-Automation"
+                target="_blank"
+                style={styles.githubButton}
+            >
+                View on GitHub
+            </Button>
+            <Button
+                variant="contained"
+                color="secondary"
+                onClick={() => openPopup("codeReviewer")}
+                style={styles.certificateButton}
+            >
+                Demo
+            </Button>
+        </div>
+
+        <Dialog open={isCertificateOpen} onClose={handleCertificateClose} maxWidth="md" fullWidth>
+            <DialogTitle>Certificate</DialogTitle>
+            <DialogContent>
+                <iframe src={SAP} title="SAP Certificate" style={styles.pdfEmbed}></iframe>
+            </DialogContent>
+        </Dialog>
+    </Paper>
+</Grid>
+
 
                         {/* Project 2: Recommender Smart Cart */}
                         <Grid item xs={12} sm={6} md={4}>
@@ -379,6 +409,14 @@ const Projects = ({darkMode,toggleDarkMode}) => {
             >
                 View on GitHub
             </Button>
+            <Button
+                variant="contained"
+                color="secondary"
+                onClick={() => openPopup("socialMedia")}
+                style={styles.certificateButton}
+            >
+                Demo
+            </Button>
         </div>
     </Paper>
 </Grid>
@@ -432,6 +470,12 @@ const Projects = ({darkMode,toggleDarkMode}) => {
                     </Grid>
                 </div>
             </div>
+            {activePopup === "codeReviewer" && (
+        <CodeReviewerPopup theme={theme} open = {true} closePopup={closePopup} darkMode={darkMode}/>
+      )}
+      {activePopup === "socialMedia" && (
+        <SocialMediaPopup theme={theme} open = {true} closePopup={closePopup} darkMode={darkMode} />
+      )}
         </ThemeProvider>
     );
 };
