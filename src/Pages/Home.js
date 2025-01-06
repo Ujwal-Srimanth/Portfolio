@@ -192,7 +192,7 @@ const Home = ({darkMode,toggleDarkMode}) => {
                                 <IconButton
                                     onClick={() =>
                                         window.open(
-                                            'https://www.linkedin.com/in/nadimpalli-ujwal-srimanth-varma-462443267/',
+                                            'www.linkedin.com/in/ujwal-srimanth',
                                             '_blank'
                                         )
                                     }
