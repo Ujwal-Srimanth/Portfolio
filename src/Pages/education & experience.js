@@ -94,8 +94,14 @@ const EducationExperience = ({darkMode,toggleDarkMode}) => {
                     <Divider style={styles.divider} />
                     <div style={styles.item}>
                         <h2 style={styles.boldText}>Software Development Intern</h2> 
-                        <strong>Providence Global India</strong> - January 2025 (Upcoming) <br />
-                        - Will work as an SDE Intern
+                        <strong>Providence Global India</strong> - January 2025 - Present <br />
+                        - Working as a SDE Intern <br/>
+                        - Working with Azure App Insights , Dotnet , Typescript <br/>
+                    </div>
+                    <Divider style={styles.divider} />
+                    <div style={styles.item}>
+                        <h2 style={styles.boldText}>SDE-1</h2> 
+                        <strong>Providence Global India</strong> - July 2025 (Upcoming) <br />
                     </div>
                 </div>
                 <div style={styles.card}>

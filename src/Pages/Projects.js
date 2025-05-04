@@ -7,6 +7,7 @@ import { Box, Typography, Button, Chip, Grid, Paper, Dialog, DialogTitle, Dialog
 import SAP from './SAP.pdf'
 import CodeReviewerPopup from "./CodeReviewerPopup";
 import SocialMediaPopup from "./SocialMediaPopup";
+import ImageForgeryPopup from './ForgeryDetectionPopup.js';
 
 
 const Projects = ({darkMode,toggleDarkMode}) => {
@@ -169,6 +170,97 @@ const Projects = ({darkMode,toggleDarkMode}) => {
                     </Typography>
 
                     <Grid container spacing={4} justifyContent="center">
+
+<Grid item xs={12} sm={6} md={4}>
+    <Paper style={styles.projectBox}>
+        <Typography variant="h6" style={{ fontWeight: 'bold' }}>
+            Image and Scanned Document Forgery Localization
+        </Typography>
+        <Typography variant="body2" style={styles.description}>
+            Description: Implemented two models: a CNN-ELA based binary mask generator for detecting tampered regions in digital images, and a YOLOv5-based model for identifying forgeries in scanned and scanned documents. Integrated the models into a Flask backend with a simple HTML frontend, supporting real-time predictions and result visualization.
+        </Typography>
+
+
+        <div style={styles.skillContainer}>
+        <div style={styles.skillItem}>
+    <img
+        src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg"
+        alt="TensorFlow"
+        style={styles.skillImage}
+    />
+    <Typography variant="body2">TensorFlow</Typography>
+</div>
+<div style={styles.skillItem}>
+    <img
+        src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+        alt="JavaScript"
+        style={styles.skillImage}
+    />
+    <Typography variant="body2">Python</Typography>
+</div>
+<div style={styles.skillItem}>
+    <img
+        src="https://upload.wikimedia.org/wikipedia/commons/3/32/OpenCV_Logo_with_text_svg_version.svg"
+        alt="OpenCV"
+        style={styles.skillImage}
+    />
+    <Typography variant="body2">OpenCV</Typography>
+</div>
+<div style={styles.skillItem}>
+    <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+        alt="HTML"
+        style={styles.skillImage}
+    />
+    <Typography variant="body2">HTML</Typography>
+</div>
+<div style={styles.skillItem}>
+    <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg"
+        alt="CSS"
+        style={styles.skillImage}
+    />
+    <Typography variant="body2">CSS</Typography>
+</div>
+<div style={styles.skillItem}>
+    <img
+        src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Javascript-icon.svg"
+        alt="Node.js"
+        style={styles.skillImage}
+    />
+    <Typography variant="body2">JavaScript</Typography>
+</div>
+
+        </div>
+
+        <div style={styles.projectStatus}>
+            <Chip label="Completed" color="primary" icon={<Assignment />} />
+        </div>
+
+        {/* New Certificate Link */}
+
+        <div style={styles.buttonContainer}>
+            <Button
+                variant="contained"
+                color="primary"
+                href="https://github.com/Ujwal-Srimanth/Image-and-Scanned-Documents-Forgery-Localization"
+                target="_blank"
+                style={styles.githubButton}
+            >
+                View on GitHub
+            </Button>
+            <Button
+                variant="contained"
+                color="secondary"
+                onClick={() => openPopup("ImageForgery")}
+                style={styles.certificateButton}
+            >
+                Demo
+            </Button>
+        </div>
+    </Paper>
+</Grid>
+
                         {/* Project 1: Efficient Code Review Automation */}
                         <Grid item xs={12} sm={6} md={4}>
     <Paper style={styles.projectBox}>
@@ -475,6 +567,9 @@ const Projects = ({darkMode,toggleDarkMode}) => {
       )}
       {activePopup === "socialMedia" && (
         <SocialMediaPopup theme={theme} open = {true} closePopup={closePopup} darkMode={darkMode} />
+      )}
+      {activePopup === "ImageForgery" && (
+        <ImageForgeryPopup theme={theme} open = {true} closePopup={closePopup} darkMode={darkMode} />
       )}
         </ThemeProvider>
     );
